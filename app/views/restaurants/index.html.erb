@@ -1,0 +1,11 @@
+<h1 class="m-5 p-4">Restaurants</h1>
+<ul>
+<%@restaurants.each do|restaurant|%>
+<div class="card container m-5 p-2">
+<li class="list-unstyled"><%= link_to restaurant.name, restaurant_path(restaurant) %></li></li>
+</div>
+<%end%>
+</ul>
+<div class="btn btn-secondary text-white">
+<%= link_to "Add a restaurant", new_restaurant_path(@restaurant) %>
+</div>
